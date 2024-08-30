@@ -85,7 +85,10 @@ body {
 .palavra-maior {
     font-size: 4em; /* Aumenta o tamanho da fonte */
     font-weight: bold; /* (Opcional) Deixa a palavra em negrito */
+    font-family: "Courgette", serif;
+    font-style: normal;
 }
+
 header {
     background-image: url('image\\quarto1.jpg');
     background-size: cover;
