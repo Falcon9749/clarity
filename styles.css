@@ -82,6 +82,10 @@ body {
     width: calc(100% - 250px);
 }
 
+.palavra-maior {
+    font-size: 4em; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* (Opcional) Deixa a palavra em negrito */
+}
 header {
     background-image: url('image\\quarto1.jpg');
     background-size: cover;
