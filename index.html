@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLARITY Cortinas e Persianas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <nav class="sidebar" id="sidebar">
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <ul id="menu-items">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#services">Serviços</a></li>
+            <li><a href="#contact">Contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content">
+        <header id="home">
+            <h1>Bem-vindo à Nossa Empresa</h1>
+            <p>Transformando ambientes com elegância e estilo</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br>
+        </header>
+
+        <section id="services">
+            <h2 class="service-title">Nossos Serviços</h2>
+            <div class="service-item">
+                <h3>Cortinas Sob Medida</h3>
+                <p>Personalize suas cortinas para se adequarem ao seu espaço e estilo.</p>
+                <div class="image-gallery">
+                    <div class="image-item">
+                        <img src="image\img1.jpg" alt="Descrição da Imagem 1">
+                        <button class="expand-btn" data-description="Descrição detalhada da Imagem 1">Expandir</button>
+                    </div>
+                    <div class="image-item">
+                        <img src="image\img2.jpg" alt="Descrição da Imagem 2">
+                        <button class="expand-btn" data-description="Descrição detalhada da Imagem 2">Expandir</button>
+                    </div>
+                    <div class="image-item">
+                        <img src="image\img3.jpg" alt="Descrição da Imagem 3">
+                        <button class="expand-btn" data-description="Descrição detalhada da Imagem 3">Expandir</button>
+                    </div>
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+            
+                <!-- Modal para exibir imagem expandida e descrição -->
+                <div id="image-modal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="modal-image">
+                    <div id="modal-caption"></div>
+                </div>
+            </div>
+            <div class="service-item">
+                <h3>Persianas Modernas</h3>
+                <p>Explore nossa variedade de persianas que combinam funcionalidade e design.</p>
+            </div>
+            <div class="service-item">
+                <h3>Instalação Profissional</h3>
+                <p>Garantimos uma instalação perfeita para um acabamento impecável.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para solicitar um orçamento ou tirar dúvidas.</p>
+            <a href="https://wa.me/+5551999603915" target="_blank" class="whatsapp-btn">Fale Conosco pelo WhatsApp</a>
+        </section>
+        <br><br>
+
+        <footer>
+            <p>&copy; 2024 Empresa de Cortinas e Persianas. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="https://www.falcon.dev.br" target="_blank" class="link-dev">Gilnei Monteiro</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
