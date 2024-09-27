@@ -244,3 +244,51 @@
   new PureCounter();
 
 })()
+
+document.addEventListener('DOMContentLoaded', function () {
+  const slides = document.querySelectorAll('.carousel-item');
+  let currentSlide = 0;
+
+  function changeSlide(nextSlideIndex) {
+    const current = slides[currentSlide];
+    const next = slides[nextSlideIndex];
+
+    // Desmontar o slide atual (mosaico + texto)
+    const currentTexts = current.querySelectorAll('.slide-text');
+    const currentGridItems = current.querySelectorAll('.grid-item');
+
+    // Desmontar os textos e o mosaico do slide atual
+    currentTexts.forEach(text => text.classList.add('slide-out'));
+    currentGridItems.forEach(item => item.classList.add('grid-item-out'));
+
+    setTimeout(() => {
+      // Remover a classe 'active' do slide atual
+      current.classList.remove('active');
+      currentTexts.forEach(text => text.classList.remove('slide-out'));
+      currentGridItems.forEach(item => item.classList.remove('grid-item-out'));
+
+      // Adicionar a classe 'active' ao próximo slide
+      next.classList.add('active');
+
+      // Remontar o próximo slide (mosaico + texto)
+      const nextTexts = next.querySelectorAll('.slide-text');
+      const nextGridItems = next.querySelectorAll('.grid-item');
+
+      nextTexts.forEach(text => text.classList.add('slide-in'));
+      nextGridItems.forEach(item => item.classList.add('grid-item-in'));
+
+      setTimeout(() => {
+        nextTexts.forEach(text => text.classList.remove('slide-in'));
+        nextGridItems.forEach(item => item.classList.remove('grid-item-in'));
+      }, 1000); // Duração da animação de montagem
+    }, 1000); // Duração da animação de desmontagem
+
+    currentSlide = nextSlideIndex;
+  }
+
+  // Exemplo de chamada para trocar slides (você pode adaptar conforme sua lógica)
+  setInterval(() => {
+    const nextSlideIndex = (currentSlide + 1) % slides.length;
+    changeSlide(nextSlideIndex);
+  }, 6000); // Troca de slides a cada 5 segundos
+});

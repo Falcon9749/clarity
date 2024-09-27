@@ -1,15 +1,6 @@
-/**
-* Template Name: Mamba
-* Template URL: https://bootstrapmade.com/mamba-one-page-bootstrap-template-free/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* Stylos */
 
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
-body {
+.body {
   font-family: "Open Sans", sans-serif;
   color: #444;
 }
@@ -31,8 +22,13 @@ h4,
 h5,
 h6,
 .font-primary {
-  font-family: "Raleway", sans-serif;
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style:italic;
 }
+
+
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -1489,3 +1485,161 @@ section {
 #footer .credits a {
   color: #9eccf4;
 }
+
+/* Grid de blocos */
+.carousel-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 colunas */
+  grid-template-rows: repeat(6, 1fr); /* 6 linhas */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Atrás do conteúdo */
+}
+
+.grid-item {
+  background-size: 100% 100%; /* O fundo será grande para se ajustar aos blocos */
+  transition: opacity 1s, transform 1s;
+}
+
+.carousel-item.active .grid-item {
+  opacity: 1;
+  transform: scale(1) translateX(0) translateY(0);
+}
+
+.carousel-item .grid-item {
+  opacity: 0;
+  transform: scale(0.5) translateX(-100px) translateY(-100px);
+}
+
+/* Animações de desmontagem */
+@keyframes gridOut {
+  0% { opacity: 1; transform: scale(1) translateX(0) translateY(0); }
+  100% { opacity: 0; transform: scale(0.5) translateX(100px) translateY(100px); }
+}
+
+@keyframes gridIn {
+  0% { opacity: 0; transform: scale(0.5) translateX(-100px) translateY(-100px); }
+  100% { opacity: 1; transform: scale(1) translateX(0) translateY(0); }
+}
+
+.grid-item-out {
+  animation: gridOut 1s forwards;
+}
+
+.grid-item-in {
+  animation: gridIn 1s forwards;
+}
+
+/* Animação em sequência para cada bloco */
+.grid-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.grid-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.grid-item:nth-child(3) {
+  animation-delay: 0.3s;
+}    
+.grid-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.grid-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.grid-item:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.grid-item:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.grid-item:nth-child(8) {
+  animation-delay: 0.5s;
+}
+.grid-item:nth-child(9) {
+  animation-delay: 0.4s;
+}    
+.grid-item:nth-child(10) {
+  animation-delay: 0.3s;
+}
+.grid-item:nth-child(11) {
+  animation-delay: 0.2s;
+}
+.grid-item:nth-child(12) {
+  animation-delay: 0.1s;
+}
+.grid-item:nth-child(13) {
+  animation-delay: 0.1s;
+}
+.grid-item:nth-child(14) {
+  animation-delay: 0.2s;
+}
+.grid-item:nth-child(15) {
+  animation-delay: 0.3s;
+}    
+.grid-item:nth-child(16) {
+  animation-delay: 0.4s;
+}
+.grid-item:nth-child(17) {
+  animation-delay: 0.5s;
+}
+.grid-item:nth-child(18) {
+  animation-delay: 0.6s;
+}
+.grid-item:nth-child(19) {
+  animation-delay: 0.6s;
+}
+.grid-item:nth-child(20) {
+  animation-delay: 0.5s;
+}
+.grid-item:nth-child(21) {
+  animation-delay: 0.4s;
+}    
+.grid-item:nth-child(22) {
+  animation-delay: 0.3s;
+}
+.grid-item:nth-child(23) {
+  animation-delay: 0.2s;
+}
+.grid-item:nth-child(24) {
+  animation-delay: 0.1s;
+}
+.grid-item:nth-child(25) {
+  animation-delay: 0.1s;
+}
+.grid-item:nth-child(26) {
+  animation-delay: 0.2s;
+}
+.grid-item:nth-child(27) {
+  animation-delay: 0.3s;
+}    
+.grid-item:nth-child(28) {
+  animation-delay: 0.4s;
+}
+.grid-item:nth-child(29) {
+  animation-delay: 0.5s;
+}
+.grid-item:nth-child(30) {
+  animation-delay: 0.6s;
+}
+.grid-item:nth-child(31) {
+  animation-delay: 0.6s;
+}
+.grid-item:nth-child(32) {
+  animation-delay: 0.5s;
+}
+.grid-item:nth-child(33) {
+  animation-delay: 0.4s;
+}    
+.grid-item:nth-child(34) {
+  animation-delay: 0.3s;
+}
+.grid-item:nth-child(35) {
+  animation-delay: 0.2s;
+}
+.grid-item:nth-child(36) {
+  animation-delay: 0.1s;
+}  
+  /* Continue até cobrir todos os blocos... */
