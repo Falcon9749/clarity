@@ -254,41 +254,41 @@ document.addEventListener('DOMContentLoaded', function () {
     const next = slides[nextSlideIndex];
 
     // Desmontar o slide atual (mosaico + texto)
-    const currentTexts = current.querySelectorAll('.slide-text');
     const currentGridItems = current.querySelectorAll('.grid-item');
 
-    // Desmontar os textos e o mosaico do slide atual
-    currentTexts.forEach(text => text.classList.add('slide-out'));
-    currentGridItems.forEach(item => item.classList.add('grid-item-out'));
+    // Animação de desmontagem dos blocos do slide atual
+    currentGridItems.forEach(item => {
+      item.classList.remove('grid-item-in');
+      item.classList.add('grid-item-out'); // Adiciona animação de desmontagem
+    });
 
     setTimeout(() => {
-      // Remover a classe 'active' do slide atual
+      // Após desmontagem, desativar o slide atual
       current.classList.remove('active');
-      currentTexts.forEach(text => text.classList.remove('slide-out'));
       currentGridItems.forEach(item => item.classList.remove('grid-item-out'));
 
-      // Adicionar a classe 'active' ao próximo slide
+      // Ativar o próximo slide
       next.classList.add('active');
 
-      // Remontar o próximo slide (mosaico + texto)
-      const nextTexts = next.querySelectorAll('.slide-text');
+      // Animação de remontagem dos blocos do próximo slide
       const nextGridItems = next.querySelectorAll('.grid-item');
+      nextGridItems.forEach(item => {
+        item.classList.remove('grid-item-out');
+        item.classList.add('grid-item-in'); // Adiciona animação de remontagem
+      });
 
-      nextTexts.forEach(text => text.classList.add('slide-in'));
-      nextGridItems.forEach(item => item.classList.add('grid-item-in'));
-
+      // Remove a classe de animação após a conclusão
       setTimeout(() => {
-        nextTexts.forEach(text => text.classList.remove('slide-in'));
         nextGridItems.forEach(item => item.classList.remove('grid-item-in'));
-      }, 1000); // Duração da animação de montagem
-    }, 1000); // Duração da animação de desmontagem
+      }, 1000); // Duração da animação de remontagem
+    }, 1000); // Tempo para a desmontagem ser concluída
 
     currentSlide = nextSlideIndex;
   }
 
-  // Exemplo de chamada para trocar slides (você pode adaptar conforme sua lógica)
+  // Troca de slides automática (pode ser adaptada)
   setInterval(() => {
     const nextSlideIndex = (currentSlide + 1) % slides.length;
     changeSlide(nextSlideIndex);
-  }, 6000); // Troca de slides a cada 5 segundos
+  }, 6000); // A cada 6 segundos troca de slide
 });
