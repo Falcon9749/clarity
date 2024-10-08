@@ -67,6 +67,64 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
+    <!-- Ícone flutuante do WhatsApp -->
+    <div class="whatsapp-icon">
+      <button type="button" onclick="goToWhatsApp()" style="background-color: transparent; border: none;">
+        <img src="assets/img/icone/icons8-whatsapp-376.png" alt="WhatsApp" class="whatsapp-img">
+      </button>
+    </div>
+
+    <script>
+      function goToWhatsApp() {
+        const whatsappNumber = "5551999603915"; // Substitua pelo número de WhatsApp desejado
+        const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}`;
+        
+        // Abre o WhatsApp em uma nova aba
+        window.open(url, '_blank');
+      }
+    </script>
+
+    <!-- CSS para o ícone flutuante -->
+    <style>
+      .whatsapp-icon {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 1000;
+        width: 70px;
+        height: 70px;
+        /* background-color: #25d366; Cor de fundo padrão do WhatsApp */
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra para dar um visual mais profissional */
+        transition: all 0.3s ease;
+      }
+
+      .whatsapp-icon:hover {
+        transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra no hover */
+      }
+
+      .whatsapp-img {
+        width: 40px;
+        height: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .whatsapp-icon {
+          width: 60px;
+          height: 60px;
+          bottom: 15px;
+          left: 15px;
+        }
+        .whatsapp-img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    </style>
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
@@ -218,14 +276,13 @@
 
             <div class="section-title">
               <h2>Sobre Nós</h2>
-              <p>Somos uma empresa nova que carrega a energia e a qualidade em nossos atendimentos aos clientes.
-
-                Nosso maior objetivo é a satisfação de nossos clientes, ajudando a fazer as melhores escolhas de conforto ao seu ambiente.
-                
-                Oferecemos diversos serviços e opções para melhor atender às suas necessidades.
-                
-                Nossa equipe tem o foco de trazer uma boa experiência desde o primeiro contato, com profissionais qualificados para solucionar suas demandas.
-                </p>
+              <p>Somos uma empresa nova que carrega a energia e a qualidade em nossos atendimentos aos clientes.                
+              <br/><br/>
+              Nosso maior objetivo é a satisfação de nossos clientes, ajudando a fazer as melhores escolhas de conforto ao seu ambiente.
+              <br/><br/>
+              Oferecemos diversos serviços e opções para melhor atender às suas necessidades.
+              <br/><br/>
+              Nossa equipe tem o foco de trazer uma boa experiência desde o primeiro contato, com profissionais qualificados para solucionar suas demandas.</p>
             </div>
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -237,7 +294,9 @@
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <div class="icon"><i class="bx bx-gift"></i></div>
               <h4 class="title"><a href="">Lavagem de Cortinas e Persianas.</a></h4>
-              <p class="description">A lavagem e higienização proporcionam um ambiente saudável e livre de fungos e outras bactérias que se acumulam devido a umidade e o tempo de uso. A lavagem de cortinas e persianas trás a experiência da renovação e economia tornando seu ambiente mais higiênico.</p>
+              <p class="description">A lavagem e higienização proporcionam um ambiente saudável e livre de fungos e outras bactérias que se acumulam devido a umidade e o tempo de uso.
+              <br/>
+              A lavagem de cortinas e persianas trás a experiência da renovação e economia tornando seu ambiente mais higiênico.</p>
             </div>
 
           </div>
@@ -270,7 +329,7 @@
               <li data-filter=".filter-app">Persiana Interna</li>
               <li data-filter=".filter-card">Persiana Externa</li>
               <li data-filter=".filter-web">Cortina</li>
-              <li data-filter=".filter-mos">Mosquiteiro</li>
+              <li data-filter=".filter-mos">Tela Mosquiteiro</li>
             </ul>
           </div>
         </div>
@@ -463,7 +522,7 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/logo_sem_fundo.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Mosquiteiro</h4>
+                <h4>Tela Mosquiteiro</h4>
                 <p>Telas mosquiteiras</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/logo_sem_fundo.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Telas mosquiteiras, fazem a função de manter seu ambiente longe dos insetos, proporcionando um ambiente mais seguro e auxiliando no combate a doenças.
@@ -483,8 +542,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/logo_sem_fundo.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Mosquiteiro</h4>
-                <p>Mosquiteiro</p>
+                <h4>Tela Mosquiteiro</h4>
+                <p>Tela Mosquiteiro</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/logo_sem_fundo.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                   <a href="servicos_3.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -497,8 +556,8 @@
             <div class="portfolio-wrap">
               <img src="assets/img/portfolio/logo_sem_fundo.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Mosquiteiro</h4>
-                <p>Mosquiteiro</p>
+                <h4>Tela Mosquiteiro</h4>
+                <p>Tela Mosquiteiro</p>
                 <div class="portfolio-links">
                   <a href="assets/img/portfolio/logo_sem_fundo.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
                   <a href="servicos_3.html" title="More Details"><i class="bi bi-link"></i></a>
@@ -546,26 +605,7 @@
             </div>
           </div>
 
-          <div class="text-center">
-            <button type="button" onclick="goToWhatsApp()">
-              <img src="assets/img/icone/whatsapp.png" alt="WhatsApp" style="width: 500px; height: 200px;">
-            </button>
-          </div>
-          
-          <script>
-            function goToWhatsApp() {
-              const whatsappNumber = "5551999603915"; // Substitua pelo número de WhatsApp desejado
-              const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}`;
-              
-              // Abre o WhatsApp em uma nova aba
-              window.open(url, '_blank');
-            }
-          </script>
-          
-          
-
         </div>
-
       </div>
     </section><!-- End Contact Us Section -->
 
