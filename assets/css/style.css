@@ -30,8 +30,6 @@
   height: 40px;
 }
 
-/* Logotipo Responsivo */
-
 @media (max-width: 768px) {
   .whatsapp-icon {
     width: 60px;
@@ -45,7 +43,9 @@
   }
 }
 
-
+/*--------------------------------------------------------------
+# Logotipo Responsivo
+--------------------------------------------------------------*/
 .carousel-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -977,6 +977,10 @@ section {
 .services .description {
   line-height: 24px;
   font-size: 14px;
+}
+
+.servicos {
+  text-align: left;
 }
 
 /*--------------------------------------------------------------
