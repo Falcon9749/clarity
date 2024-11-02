@@ -46,17 +46,6 @@
 /*--------------------------------------------------------------
 # Logotipo Responsivo
 --------------------------------------------------------------*/
-.carousel-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 10px;
-}
-
-@media (max-width: 768px) {
-  .carousel-grid {
-      grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  }
-}
 
 .body {
   font-family: "Open Sans", sans-serif;
@@ -1600,7 +1589,7 @@ section {
 }
 
 /* Animação em sequência para cada bloco */
-.grid-item:nth-child(1) {
+/* .grid-item:nth-child(1) {
   animation-delay: 0.1s;
 }
 .grid-item:nth-child(2) {
@@ -1707,5 +1696,5 @@ section {
 }
 .grid-item:nth-child(36) {
   animation-delay: 0.7s;
-}  
+}   */
   /* Continue até cobrir todos os blocos... */
