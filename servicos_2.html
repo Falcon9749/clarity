@@ -71,6 +71,22 @@
 
     <!-- ======= Breadcrumbs Section ======= -->
     <section class="breadcrumbs">
+      <!-- Ícone flutuante do WhatsApp -->
+      <div class="whatsapp-icon">
+        <button type="button" onclick="goToWhatsApp()" style="background-color: transparent; border: none;">
+          <img src="assets/img/icone/icons8-whatsapp-376.png" alt="WhatsApp" class="whatsapp-img">
+        </button>
+      </div>
+
+      <script>
+        function goToWhatsApp() {
+          const whatsappNumber = "5551999603915"; // Substitua pelo número de WhatsApp desejado
+          const url = `https://api.whatsapp.com/send?phone=${whatsappNumber}`;
+          
+          // Abre o WhatsApp em uma nova aba
+          window.open(url, '_blank');
+        }
+      </script>    
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
